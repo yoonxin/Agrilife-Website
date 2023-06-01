@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'SF Pro';
+    src: url(fonts/SF_Pro.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'SF Pro', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background: #d8eeed;
+}
+
+a{
+    text-decoration: none;
+    color: #5A5A5A;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 6px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.logo img{
+    width: 30px;
+    margin-right: 15px;
+    display: block;
+}
+.navbar_center{
+    position: relative;
+    right: 140px;
+}
+
+.navbar_center ul li{
+    display: inline-block;
+    list-style: none;
+    padding-left: 5px;
+}
+
+.navbar_center ul li a{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 5px 8px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.navbar_center ul li a img{
+    width: 30px;
+
+}
+
+.navbar_center ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #14938f;
+    position: absolute;
+    bottom: -15px;
+    transition: width 0.3s;
+}
+
+.navbar_center ul li a:hover::after{
+    width: 100%;
+}
+
+.nav_profile_pic{
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
+
+.search_bar{
+    background: #f0f2f5;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-style: solid;
+    border-color: green;
+}
+
+.navbar_left{
+    display: flex;
+    align-items: center;
+}
+
+.search_bar img{
+    width: 14px;
+    cursor: pointer;
+}
+
+.search_bar input{
+    width: 100%;
+    background: transparent;
+    padding: 8px;
+    outline: none;
+    border: 0;
+}
+
+/*-- Navigation bar (up) --*/
+
+.drop_down_menu{
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.drop_down_menu.open_menu{
+    max-height: 400px;
+}
+
+.menu{
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1)
+}
+
+.menu_function{
+    display: flex;
+    align-items: center;
+    color: black;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.menu_function p{
+    width: 100%;
+}
+
+.menu_function img{
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/*-- Drop down menu (up) --*/
+
+
+
+
+.container{
+    padding: 20px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+.user_profile{
+    flex-basis: 5%;
+    align-self: flex-start;
+    position: sticky;
+    top: 73px;
+}
+
+.profile_info{
+    padding: 0 25px;
+    text-align: center;
+
+}
+
+.profile_info img{
+    width: 150px;
+    border-radius: 50%;
+    padding: 4px;
+    margin-top: -45;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #e6f7dc;
+}
+
+.profile_info h1{
+    font-size: 40px;
+}
+
+
+.container_settings {
+    flex-basis: 75%;
+align-self: flex-start;
+max-width: 800px;
+margin: 0 auto;
+position: relative;
+}
+.title {
+text-align: left;
+margin-bottom: 30px;
+position: relative;
+right: 10px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.form-control {
+display: block;
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+position: relative;
+}
+
+textarea.form-control {
+height: 50px;
+resize: none;
+}
+
+.btn {
+display: inline-block;
+padding: 10px 20px;
+font-size: 16px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+color: #fff;
+background-color: #007bff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.btn-light {
+background-color: #f8f9fa;
+color: #212529;
+}
+
+.btn-primary:hover,
+.btn-light:hover {
+background-color: #0069d9;
+}
+.drop_down_settings{
+cursor: pointer;
+margin-top: 20px;
+}
+.drop_down_settings .password_row{
+display: none;
+}
+.drop_down_settings.open .password_row{
+display: block;
+width: auto;
+margin-top: 10px;
+}
+
+.drop_down_settings .information_row{
+display: none;
+}
+.drop_down_settings.open .information_row{
+display: block;
+}

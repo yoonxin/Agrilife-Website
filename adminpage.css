@@ -1,0 +1,368 @@
+/*inherited css from user main_page.php*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #d8eeed;
+    color: #5f5f5f;
+}
+a{
+    text-decoration: none;
+    color: #5f5f5f;
+}
+h2 {
+    color:#002d00;
+    padding: 5px;
+}
+
+
+/*--------left sidebar styling-----------*/
+.left-sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    top: 30px;
+
+}
+
+.left-sidebar h1{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.sidebar-activity{
+    background: #F5F5F5;
+    padding: 25px 25px;
+    margin: 12px 0;
+    font-size: 20px;
+    color: #002d00;
+}
+
+
+/*--------LEFTSIDE BAR END-----------*/
+
+/* right side bar start */
+.right-sidebar{
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    top: 60px;
+}
+.sidebar-news{
+    background: #F5F5F5;
+    padding: 10px 10px;
+}
+.sidebar-news h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 10px 0 15px;
+}
+.sidebar-news a{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    position: relative;
+    bottom: 10px;
+    
+}
+.sidebar-news span{
+    font-size: 12px;
+    position: relative;
+    bottom: 8px;
+}
+.sidebar-news .read-more.link{
+    color: #045be6;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+.sidebar-useful-links{
+    padding: 15px 25px;
+    text-align: center;
+}
+.sidebar-useful-links button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.copyright-msg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 500;
+    
+}
+.copyright-msg img{
+    width: 18px;
+    margin-right: 4px;
+}
+/* right side bar ends */
+
+
+/*new css implemented in admin page*/
+
+/* styling for main content */
+.main-content {
+    flex-basis: 47%;
+}
+
+.container{
+    padding: 20px 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ /*  Dashboard tab */
+ /* Overview styling */
+ .cardbox {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+.cardbox .card {
+    position: relative;
+    background: green;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0, 0.8);
+    align-items: center;
+}
+
+.cardbox .card .numbers {
+    position: relative;
+    font-weight: 400;
+    font-size: 2.5em;
+    color: whitesmoke;
+}
+
+.cardbox .card .cardname {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: black;
+    font-family: "Bahnschrift Light";
+}
+
+.cardbox .card .iconbx {
+    font-size:3.0em;
+    color: black;
+}
+
+.cardbox .card:hover {
+    background: lightgreen;
+}
+ 
+/* Overview ends */
+
+/*graph styling starts here*/
+.graphbox {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    grid-gap: 30px;
+    min-height: 200px;
+}
+
+.graphbox .box{
+    position: relative;
+    background: #88a693;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0, 0.8);
+}
+/* graph styling ends here */
+/* Dashboard styling ends */
+
+/* Manage User Post tab */
+/* list of user post styling */
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr, 1fr;
+    grid-gap: 30px;
+}
+
+.details .managepost {
+    position: relative;
+    display: grid;
+
+    min-height: 101%;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardheader h2{
+    font-weight: 600;
+    background: greenyellow;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 5px;
+}
+
+table td a {
+    color: #395efd;
+    text-decoration: underline;
+}
+
+thead {
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {background-color: #d2eade;}
+/* List of User Post ends */
+
+
+/* Manage Trending News tab */
+/* styling for add and manage trending news */
+.details .addnews {
+    position: relative;
+    display: grid;
+    min-height: 101%;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardheader a{
+    color: #395efd;
+    text-decoration: underline;
+    align-self: center;
+}
+
+.details .managenews {
+    position: relative;
+    display: grid;
+    min-height: 101%;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.details .manage_comment {
+    position: relative;
+    display: grid;
+    min-height: 101%;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.details .manage_account {
+    position: relative;
+    display: grid;
+    min-height: 101%;
+    background: whitesmoke;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+/* styling for add and manage trending news ends */
+
+
+/* displaying content at the left sidebar */
+
+        .flex-container {
+        display:flex;
+        width:100%;
+        }
+
+        .flex-container > div {
+        width:100%;
+        padding: 10px; 
+        }
+
+        .tab {
+        height:auto;
+        cursor:pointer;
+        padding: 5px 5%;
+        margin-bottom: 7px;
+        border-radius: 5px;
+        position: relative;
+        right: 20px;
+        margin-bottom: 15px;
+        }
+
+        .content {
+        position: relative;
+        height: auto;
+        width: 100%;
+        border-radius: 20px;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1;
+        border-style: solid;
+        }
+
+        .content.hide {
+            opacity: 0;
+            pointer-events: none;
+            height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        #tab1, #content1 {
+        background-color: #EEE9E9;
+        }
+
+        #tab2, #content2 {
+        background-color: #C5E7F2;
+        }
+
+        #tab3, #content3 {
+        background-color: #FFB685;
+        }
+
+        #tab4, #content4 {
+        background-color: #0BDA51;
+        }
+
+        #tab5, #content5 {
+        background-color: #C1E1C1;
+        }
+
+        #content2, #content3,#content4,#content5 {
+        display: none;    
+        }
+
+        #content1 {
+        display: block;
+        }
+
